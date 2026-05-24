@@ -1,9 +1,9 @@
 spring:
-  application:
-    name: product-service
+    application:
+        name: notification-service
 
 server:
-  port: 8082
+    port: 8085
 
 management:
   endpoints:
