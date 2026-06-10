@@ -12,7 +12,7 @@ spring:
                             - Path=/api/users/**
                
 server:
-    port: 8888
+    port: 8889
 
 eureka:
     client:
