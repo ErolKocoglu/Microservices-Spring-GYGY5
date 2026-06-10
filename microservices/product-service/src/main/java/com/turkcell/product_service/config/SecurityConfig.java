@@ -19,8 +19,10 @@ public class SecurityConfig {
                         .anyRequest().authenticated())
                 .oauth2ResourceServer(
                         oauth2 -> oauth2.jwt(Customizer.withDefaults()))
-                .csrf(AbstractHttpConfigurer::disable)
+                .csrf(AbstractHttpConfigurer::disable) // session yok, cookie yok bu yüzden csrf'yi devre dışı bırakıyoruz.
                 .sessionManagement(sm -> sm.sessionCreationPolicy(SessionCreationPolicy.STATELESS));
         return http.build();
     }
 }
+
+// Tüm servislere oauth2ResourceServer eklemek.
