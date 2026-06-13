@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: bff-service
+  config:
+    import: "optional:configserver:http://localhost:8888"
+
+server:
+  port: 8080
+
+# Configure OAuth2 Client (BFF) Here - Connects to the Auth Server

@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: auth-service
+  config:
+    import: "optional:configserver:http://localhost:8888"
+
+server:
+  port: 9000
+
+# Base Configuration for OAuth2 Auth Server (can be configured further on Config Server)
