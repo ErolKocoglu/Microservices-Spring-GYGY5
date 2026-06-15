@@ -17,7 +17,7 @@ public class SecurityConfig {
         http.authorizeHttpRequests(
                 auth -> auth.requestMatchers("/actuator/**", "/swagger-ui/**", "/v3/api-docs/**").permitAll()
                         .requestMatchers("/api/v1/products/**").permitAll()
-                        .anyRequest().authenticated())
+                        .anyRequest().permitAll())
                 .oauth2ResourceServer(
                         oauth2 -> oauth2.jwt(Customizer.withDefaults()))
                 .csrf(AbstractHttpConfigurer::disable) // session yok, cookie yok bu yüzden csrf'yi devre dışı bırakıyoruz.

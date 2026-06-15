@@ -13,6 +13,10 @@ spring:
       kafka:
         binder:
           brokers: localhost:9092
+  data:
+    redis:
+      host: localhost
+      port: 6379
   datasource:
     url: jdbc:postgresql://localhost:5433/products
     username: postgres
