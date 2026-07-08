@@ -92,3 +92,4 @@ public class SecurityConfig {
         }
     }
 }
+// Sisteme BFF ve auth eklenecek.
